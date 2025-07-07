@@ -34,6 +34,7 @@ rails db:migrate
 
 # Inicie o servidor
 rails server
+```
 
 Acesse a aplicação no navegador em http://localhost:3000/stories
 
@@ -48,22 +49,23 @@ Publicação de contos via botão específico
 
 Renderização das views usando Decorator para organizar apresentação
 
-🧠 Conceitos aplicados
-Form Object
+🧠 Conceitos aplicados:
+
+- Form Object
 Utilizado para encapsular a lógica de validação e criação de novos contos, separando responsabilidades do model principal e facilitando testes e manutenção. No projeto, StoryForm é responsável por validar título e corpo antes de criar um novo registro.
 
-Decorator
+- Decorator
 Aplicado para organizar a lógica de apresentação dos contos, mantendo as views limpas. A classe StoryDecorator encapsula métodos para formatar a exibição dos dados, deixando o código mais modular.
 
-Concern
+- Concern
 Utilizado para compartilhar funcionalidades comuns entre models, no caso, o módulo de busca (Searchable) que pode ser reaproveitado facilmente em outros modelos além de Story.
 
-Query Object
+- Query Object
 Implementado para separar a construção das consultas ao banco, facilitando a manutenção e a extensão das regras de busca e filtro. O StoryQuery recebe parâmetros e retorna os contos filtrados conforme a necessidade (por exemplo, filtrar por status de publicação).
 
-Service Object
+- Service Object
 Aplicado para encapsular regras de negócio específicas, como a publicação de um conto. O StoryPublisher centraliza essa funcionalidade, deixando os controllers mais enxutos e o código mais organizado.
 
 📌 Considerações finais
-Este projeto foi desenvolvido com foco em aplicar padrões de arquitetura e boas práticas em Ruby on Rails, visando um código limpo, testável e fácil de manter. Além disso, a aplicação guarda contos que remetem a histórias importantes e lembranças da infância, valorizando a simplicidade e a organização.
+Este projeto foi desenvolvido com foco em aplicar padrões de arquitetura e boas práticas em Ruby on Rails, visando um código fácil de manter. Além disso, a aplicação guarda contos que remetem a histórias importantes e lembranças da infância, valorizando a simplicidade e a organização.
 
