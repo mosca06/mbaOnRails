@@ -1,0 +1,2654 @@
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='Blog'*/[0m
+  [1m[35m (126.3ms)[0m  [1m[35mCREATE DATABASE "blog_development" ENCODING = 'unicode' /*application='Blog'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='Blog'*/[0m
+  [1m[35m (235.2ms)[0m  [1m[35mCREATE DATABASE "blog_test" ENCODING = 'unicode' /*application='Blog'*/[0m
+  [1m[35m (11.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='Blog'*/[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Blog'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(892336952976185220) /*application='Blog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Blog'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-07-07 03:43:40.121528', '2025-07-07 03:43:40.121532') RETURNING "key" /*application='Blog'*/[0m
+Migrating to CreateStories (20250707034331)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='Blog'*/[0m
+  [1m[35m (12.8ms)[0m  [1m[35mCREATE TABLE "stories" ("id" bigserial primary key, "title" character varying, "body" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Blog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250707034331') RETURNING "version" /*application='Blog'*/[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT /*application='Blog'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(892336952976185220) /*application='Blog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='Blog'*/[0m
+  [1m[35m (52.1ms)[0m  [1m[35mCREATE DATABASE "blog_development" ENCODING = 'unicode' /*application='Blog'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='Blog'*/[0m
+  [1m[35m (46.4ms)[0m  [1m[35mCREATE DATABASE "blog_test" ENCODING = 'unicode' /*application='Blog'*/[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(892336952976185220) /*application='Blog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Blog'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(892336952976185220) /*application='Blog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(892336952976185220) /*application='Blog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+Migrating to CreateStories (20250707034331)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='Blog'*/[0m
+  [1m[35m (10.8ms)[0m  [1m[35mDROP TABLE "stories" /*application='Blog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.9ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20250707034331' /*application='Blog'*/[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT /*application='Blog'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(892336952976185220) /*application='Blog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='Blog'*/[0m
+  [1m[35m (49.1ms)[0m  [1m[35mCREATE DATABASE "blog_development" ENCODING = 'unicode' /*application='Blog'*/[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mSET search_path TO public /*application='Blog'*/[0m
+  [1m[35m (37.6ms)[0m  [1m[35mCREATE DATABASE "blog_test" ENCODING = 'unicode' /*application='Blog'*/[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(892336952976185220) /*application='Blog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Blog'*/[0m
+Migrating to CreateStories (20250707034331)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='Blog'*/[0m
+  [1m[35m (9.8ms)[0m  [1m[35mCREATE TABLE "stories" ("id" bigserial primary key, "title" character varying, "body" text, "published" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Blog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250707034331') RETURNING "version" /*application='Blog'*/[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT /*application='Blog'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(892336952976185220) /*application='Blog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+  [1m[35mSQL (4.0ms)[0m  [1m[35mSET search_path TO public /*application='Blog'*/[0m
+  [1m[35m (84.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "contos_development" /*application='Blog'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Blog'*/[0m
+  [1m[35m (32.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "contos_test" /*application='Blog'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Blog'*/[0m
+  [1m[35m (132.1ms)[0m  [1m[35mCREATE DATABASE "contos_development" ENCODING = 'unicode' /*application='Blog'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Blog'*/[0m
+  [1m[35m (193.8ms)[0m  [1m[35mCREATE DATABASE "contos_test" ENCODING = 'unicode' /*application='Blog'*/[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql" SCHEMA pg_catalog /*application='Blog'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "stories" CASCADE /*application='Blog'*/[0m
+  [1m[35m (11.4ms)[0m  [1m[35mCREATE TABLE "stories" ("id" bigserial primary key, "title" character varying, "body" text, "published" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Blog'*/[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='Blog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20250707034331) /*application='Blog'*/[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Blog'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Blog'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-07-07 03:48:28.642655', '2025-07-07 03:48:28.642742') RETURNING "key" /*application='Blog'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Blog'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Blog'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', '246d0ad20979070f1cbc944ecf78b930e882b513', '2025-07-07 03:48:28.674520', '2025-07-07 03:48:28.674522') RETURNING "key" /*application='Blog'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3931094289000325125) /*application='Blog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Blog'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3931094289000325125) /*application='Blog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3931094289000325125) /*application='Blog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+Migrating to CreateStories (20250707034331)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*application='Blog'*/[0m
+  [1m[35m (10.1ms)[0m  [1m[35mDROP TABLE "stories" /*application='Blog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.9ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20250707034331' /*application='Blog'*/[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT /*application='Blog'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3931094289000325125) /*application='Blog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mSET search_path TO public /*application='Blog'*/[0m
+  [1m[35m (137.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "contos_development" /*application='Blog'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Blog'*/[0m
+  [1m[35m (86.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "contos_test" /*application='Blog'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Blog'*/[0m
+  [1m[35m (86.8ms)[0m  [1m[35mCREATE DATABASE "contos_development" ENCODING = 'unicode' /*application='Blog'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mSET search_path TO public /*application='Blog'*/[0m
+  [1m[35m (215.2ms)[0m  [1m[35mCREATE DATABASE "contos_test" ENCODING = 'unicode' /*application='Blog'*/[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql" SCHEMA pg_catalog /*application='Blog'*/[0m
+  [1m[35m (9.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY) /*application='Blog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (0) /*application='Blog'*/[0m
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Blog'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Blog'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-07-07 03:50:40.731920', '2025-07-07 03:50:40.731926') RETURNING "key" /*application='Blog'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Blog'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Blog'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', '9c6777daaa6ce85cc74b26c38000144a7834a947', '2025-07-07 03:50:40.777641', '2025-07-07 03:50:40.777645') RETURNING "key" /*application='Blog'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3931094289000325125) /*application='Blog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='Blog'*/[0m
+Migrating to CreateStories (20250707034331)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN /*application='Blog'*/[0m
+  [1m[35m (13.2ms)[0m  [1m[35mCREATE TABLE "stories" ("id" bigserial primary key, "title" character varying, "body" text, "published" boolean, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL) /*application='Blog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250707034331') RETURNING "version" /*application='Blog'*/[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT /*application='Blog'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3931094289000325125) /*application='Blog'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+  [1m[36mStory Load (98.4ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /* loading for pp */ LIMIT 11 /*application='Blog'*/[0m
+Started GET "/" for 127.0.0.1 at 2025-07-07 04:31:12 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/vscode/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/vscode/.local/share/mise/installs/ruby/3.4.4/lib/ruby/gems/3.4.0/gems/railties-8.0.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.6ms | GC: 0.0ms)
+Completed 200 OK in 71ms (Views: 9.8ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories" for 127.0.0.1 at 2025-07-07 04:31:33 +0000
+Processing by StoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (41.9ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/index.html.erb within layouts/application (Duration: 50.7ms | GC: 1.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 78.4ms | GC: 3.9ms)
+Completed 200 OK in 173ms (Views: 31.7ms | ActiveRecord: 49.9ms (1 query, 0 cached) | GC: 31.8ms)
+
+
+Started GET "/assets/turbo.min-3a2e143f.js" for 127.0.0.1 at 2025-07-07 04:31:34 +0000
+Started GET "/assets/stimulus.min-4b1e420e.js" for 127.0.0.1 at 2025-07-07 04:31:34 +0000
+Started GET "/assets/stimulus-loading-1fc53fe7.js" for 127.0.0.1 at 2025-07-07 04:31:34 +0000
+Started GET "/stories/new" for 127.0.0.1 at 2025-07-07 04:31:37 +0000
+Processing by StoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form.html.erb (Duration: 30.6ms | GC: 0.0ms)
+  Rendered stories/new.html.erb within layouts/application (Duration: 33.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 38.9ms | GC: 0.0ms)
+Completed 200 OK in 140ms (Views: 41.7ms | ActiveRecord: 10.9ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/stories" for 127.0.0.1 at 2025-07-07 04:31:45 +0000
+Processing by StoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "story" => {"title" => "Titulo1", "body" => "bodydydy 1"}, "commit" => "Create Story"}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN /*action='create',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:27:in 'block in StoriesController#create'
+  [1m[36mStory Create (3.0ms)[0m  [1m[32mINSERT INTO "stories" ("title", "body", "published", "created_at", "updated_at") VALUES ('Titulo1', 'bodydydy 1', NULL, '2025-07-07 04:31:45.421806', '2025-07-07 04:31:45.421806') RETURNING "id" /*action='create',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:27:in 'block in StoriesController#create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT /*action='create',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:27:in 'block in StoriesController#create'
+Redirected to http://localhost:3000/stories/1
+Completed 302 Found in 84ms (ActiveRecord: 4.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories/1" for 127.0.0.1 at 2025-07-07 04:31:45 +0000
+Processing by StoriesController#show as TURBO_STREAM
+  Parameters: {"id" => "1"}
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 1 LIMIT 1 /*action='show',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  Rendering layout layouts/application.html.erb
+  Rendering stories/show.html.erb within layouts/application
+  Rendered stories/_story.html.erb (Duration: 4.8ms | GC: 0.0ms)
+  Rendered stories/show.html.erb within layouts/application (Duration: 26.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 27.1ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method 'decorator' for an instance of #<Class:0x000072a81a539ed8>)
+Caused by: NameError (undefined local variable or method 'decorator' for an instance of #<Class:0x000072a81a539ed8>)
+
+Information for: ActionView::Template::Error (undefined local variable or method 'decorator' for an instance of #<Class:0x000072a81a539ed8>):
+    1: <div id="<%= dom_id decorator.story %>">
+    2:   <p>
+    3:     <strong>Title:</strong>
+    4:     <%= decorator.story.title %>
+  
+app/views/stories/_story.html.erb:1
+app/views/stories/show.html.erb:3
+
+Information for cause: NameError (undefined local variable or method 'decorator' for an instance of #<Class:0x000072a81a539ed8>):
+  
+app/views/stories/_story.html.erb:1
+app/views/stories/show.html.erb:3
+Started GET "/favicon.ico" for 127.0.0.1 at 2025-07-07 04:32:26 +0000
+Started GET "/stories" for 127.0.0.1 at 2025-07-07 04:32:26 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Processing by StoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (1.2ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/index.html.erb within layouts/application (Duration: 66.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 67.7ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 151ms (ActiveRecord: 6.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method 'call' for class StoryDecorator)
+Caused by: NoMethodError (undefined method 'call' for class StoryDecorator)
+
+Information for: ActionView::Template::Error (undefined method 'call' for class StoryDecorator):
+    15: 
+    16: <div id="stories">
+    17:   <% @stories.each do |story| %>
+    18:     <%= render partial: "story", locals: { decorator: StoryDecorator.call(story) } %>
+    19:     <p>
+    20:       <%= link_to "Show this story", story %>
+    21:     </p>
+  
+app/views/stories/index.html.erb:18
+app/views/stories/index.html.erb:17
+
+Information for cause: NoMethodError (undefined method 'call' for class StoryDecorator):
+  
+app/views/stories/index.html.erb:18
+app/views/stories/index.html.erb:17
+Started GET "/stories" for 127.0.0.1 at 2025-07-07 04:32:30 +0000
+Processing by StoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (1.3ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/index.html.erb within layouts/application (Duration: 10.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method 'call' for class StoryDecorator)
+Caused by: NoMethodError (undefined method 'call' for class StoryDecorator)
+
+Information for: ActionView::Template::Error (undefined method 'call' for class StoryDecorator):
+    15: 
+    16: <div id="stories">
+    17:   <% @stories.each do |story| %>
+    18:     <%= render partial: "story", locals: { decorator: StoryDecorator.call(story) } %>
+    19:     <p>
+    20:       <%= link_to "Show this story", story %>
+    21:     </p>
+  
+app/views/stories/index.html.erb:18
+app/views/stories/index.html.erb:17
+
+Information for cause: NoMethodError (undefined method 'call' for class StoryDecorator):
+  
+app/views/stories/index.html.erb:18
+app/views/stories/index.html.erb:17
+Started GET "/stories" for 127.0.0.1 at 2025-07-07 04:32:55 +0000
+Processing by StoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.8ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 43.7ms | GC: 2.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 56.7ms | GC: 2.1ms)
+Completed 200 OK in 82ms (Views: 51.6ms | ActiveRecord: 7.1ms (1 query, 0 cached) | GC: 2.1ms)
+
+
+Started GET "/stories/1" for 127.0.0.1 at 2025-07-07 04:32:58 +0000
+Processing by StoriesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStory Load (0.8ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 1 LIMIT 1 /*action='show',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  Rendering layout layouts/application.html.erb
+  Rendering stories/show.html.erb within layouts/application
+  Rendered stories/_story.html.erb (Duration: 2.1ms | GC: 0.9ms)
+  Rendered stories/show.html.erb within layouts/application (Duration: 12.8ms | GC: 2.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.4ms | GC: 2.7ms)
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 5.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method 'decorator' for an instance of #<Class:0x000072a7eb458ac0>)
+Caused by: NameError (undefined local variable or method 'decorator' for an instance of #<Class:0x000072a7eb458ac0>)
+
+Information for: ActionView::Template::Error (undefined local variable or method 'decorator' for an instance of #<Class:0x000072a7eb458ac0>):
+    1: <div id="<%= dom_id decorator.story %>">
+    2:   <p>
+    3:     <strong>Title:</strong>
+    4:     <%= decorator.story.title %>
+  
+app/views/stories/_story.html.erb:1
+app/views/stories/show.html.erb:3
+
+Information for cause: NameError (undefined local variable or method 'decorator' for an instance of #<Class:0x000072a7eb458ac0>):
+  
+app/views/stories/_story.html.erb:1
+app/views/stories/show.html.erb:3
+Started GET "/stories/new" for 127.0.0.1 at 2025-07-07 04:32:59 +0000
+Processing by StoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form.html.erb (Duration: 16.5ms | GC: 0.0ms)
+  Rendered stories/new.html.erb within layouts/application (Duration: 17.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | GC: 0.0ms)
+Completed 200 OK in 74ms (Views: 24.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 7.3ms)
+
+
+Started GET "/stories/1" for 127.0.0.1 at 2025-07-07 04:32:59 +0000
+Processing by StoriesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStory Load (0.5ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 1 LIMIT 1 /*action='show',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  Rendering layout layouts/application.html.erb
+  Rendering stories/show.html.erb within layouts/application
+  Rendered stories/_story.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered stories/show.html.erb within layouts/application (Duration: 5.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method 'decorator' for an instance of #<Class:0x000072a7eb458ac0>)
+Caused by: NameError (undefined local variable or method 'decorator' for an instance of #<Class:0x000072a7eb458ac0>)
+
+Information for: ActionView::Template::Error (undefined local variable or method 'decorator' for an instance of #<Class:0x000072a7eb458ac0>):
+    1: <div id="<%= dom_id decorator.story %>">
+    2:   <p>
+    3:     <strong>Title:</strong>
+    4:     <%= decorator.story.title %>
+  
+app/views/stories/_story.html.erb:1
+app/views/stories/show.html.erb:3
+
+Information for cause: NameError (undefined local variable or method 'decorator' for an instance of #<Class:0x000072a7eb458ac0>):
+  
+app/views/stories/_story.html.erb:1
+app/views/stories/show.html.erb:3
+Started GET "/stories?published=true" for 127.0.0.1 at 2025-07-07 04:33:02 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => "true"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 9.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | GC: 0.0ms)
+Completed 200 OK in 35ms (Views: 15.0ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?published=false" for 127.0.0.1 at 2025-07-07 04:33:04 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => "false"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 12.1ms | GC: 3.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | GC: 3.1ms)
+Completed 200 OK in 31ms (Views: 12.8ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 3.1ms)
+
+
+Started GET "/stories?published=false" for 127.0.0.1 at 2025-07-07 04:33:07 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => "false"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.5ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 4.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | GC: 0.0ms)
+Completed 200 OK in 23ms (Views: 6.5ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?published=true" for 127.0.0.1 at 2025-07-07 04:33:08 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => "true"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.5ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 9.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | GC: 0.0ms)
+Completed 200 OK in 35ms (Views: 11.3ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 2.5ms)
+
+
+Started GET "/stories?published=" for 127.0.0.1 at 2025-07-07 04:33:11 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 12.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | GC: 0.0ms)
+Completed 200 OK in 44ms (Views: 17.9ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 1.1ms)
+
+
+Started GET "/stories/1" for 127.0.0.1 at 2025-07-07 04:33:14 +0000
+Processing by StoriesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStory Load (0.8ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 1 LIMIT 1 /*action='show',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  Rendering layout layouts/application.html.erb
+  Rendering stories/show.html.erb within layouts/application
+  Rendered stories/_story.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered stories/show.html.erb within layouts/application (Duration: 2.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 1.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method 'decorator' for an instance of #<Class:0x000072a7eb458ac0>)
+Caused by: NameError (undefined local variable or method 'decorator' for an instance of #<Class:0x000072a7eb458ac0>)
+
+Information for: ActionView::Template::Error (undefined local variable or method 'decorator' for an instance of #<Class:0x000072a7eb458ac0>):
+    1: <div id="<%= dom_id decorator.story %>">
+    2:   <p>
+    3:     <strong>Title:</strong>
+    4:     <%= decorator.story.title %>
+  
+app/views/stories/_story.html.erb:1
+app/views/stories/show.html.erb:3
+
+Information for cause: NameError (undefined local variable or method 'decorator' for an instance of #<Class:0x000072a7eb458ac0>):
+  
+app/views/stories/_story.html.erb:1
+app/views/stories/show.html.erb:3
+Started GET "/stories?published=" for 127.0.0.1 at 2025-07-07 04:39:49 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (32.2ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/index.html.erb within layouts/application (Duration: 84.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 87.6ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 159ms (ActiveRecord: 46.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement #to_partial_path.)
+Caused by: ArgumentError ('nil' is not an ActiveModel-compatible object. It must implement #to_partial_path.)
+
+Information for: ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement #to_partial_path.):
+    15: 
+    16: <div id="stories">
+    17:   <% @stories.each do |story| %>
+    18:     <%= render StoryDecorator.new(@story) %>
+    19:     <p>
+    20:       <%= link_to "Show this story", story %>
+    21:     </p>
+  
+app/views/stories/index.html.erb:18
+app/views/stories/index.html.erb:17
+
+Information for cause: ArgumentError ('nil' is not an ActiveModel-compatible object. It must implement #to_partial_path.):
+  
+app/views/stories/index.html.erb:18
+app/views/stories/index.html.erb:17
+Started GET "/stories/1" for 127.0.0.1 at 2025-07-07 04:39:54 +0000
+Processing by StoriesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStory Load (1.9ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 1 LIMIT 1 /*action='show',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  Rendering layout layouts/application.html.erb
+  Rendering stories/show.html.erb within layouts/application
+  Rendered stories/_story.html.erb (Duration: 5.8ms | GC: 0.8ms)
+  Rendered stories/show.html.erb within layouts/application (Duration: 17.0ms | GC: 2.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 61.1ms | GC: 22.6ms)
+Completed 200 OK in 135ms (Views: 67.2ms | ActiveRecord: 1.6ms (1 query, 0 cached) | GC: 29.3ms)
+
+
+Started GET "/stories/1" for 127.0.0.1 at 2025-07-07 04:39:54 +0000
+Processing by StoriesController#show as HTML
+  Parameters: {"id" => "1"}
+  [1m[36mStory Load (0.8ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 1 LIMIT 1 /*action='show',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  Rendering layout layouts/application.html.erb
+  Rendering stories/show.html.erb within layouts/application
+  Rendered stories/_story.html.erb (Duration: 1.2ms | GC: 0.4ms)
+  Rendered stories/show.html.erb within layouts/application (Duration: 8.8ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | GC: 1.1ms)
+Completed 200 OK in 63ms (Views: 20.1ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 5.7ms)
+
+
+Started DELETE "/stories/1" for 127.0.0.1 at 2025-07-07 04:39:58 +0000
+Processing by StoriesController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "id" => "1"}
+  [1m[36mStory Load (0.8ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 1 LIMIT 1 /*action='destroy',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='destroy',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:52:in 'StoriesController#destroy'
+  [1m[36mStory Destroy (1.7ms)[0m  [1m[31mDELETE FROM "stories" WHERE "stories"."id" = 1 /*action='destroy',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:52:in 'StoriesController#destroy'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT /*action='destroy',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:52:in 'StoriesController#destroy'
+Redirected to http://localhost:3000/stories
+Completed 303 See Other in 59ms (ActiveRecord: 3.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories" for 127.0.0.1 at 2025-07-07 04:39:58 +0000
+Processing by StoriesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (1.3ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/index.html.erb within layouts/application (Duration: 7.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | GC: 0.0ms)
+Completed 200 OK in 32ms (Views: 11.3ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories/new" for 127.0.0.1 at 2025-07-07 04:39:59 +0000
+Processing by StoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form.html.erb (Duration: 12.5ms | GC: 0.0ms)
+  Rendered stories/new.html.erb within layouts/application (Duration: 13.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | GC: 0.0ms)
+Completed 200 OK in 41ms (Views: 17.5ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 2.0ms)
+
+
+Started GET "/stories" for 127.0.0.1 at 2025-07-07 04:40:04 +0000
+Processing by StoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.5ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/index.html.erb within layouts/application (Duration: 15.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 18.6ms | GC: 0.0ms)
+Completed 200 OK in 47ms (Views: 19.4ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/stories" for 127.0.0.1 at 2025-07-07 04:40:05 +0000
+Processing by StoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "story" => {"title" => "Titulo1", "body" => "fdfgw3r2wr23r"}, "commit" => "Create Story"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN /*action='create',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:27:in 'block in StoriesController#create'
+  [1m[36mStory Create (2.3ms)[0m  [1m[32mINSERT INTO "stories" ("title", "body", "published", "created_at", "updated_at") VALUES ('Titulo1', 'fdfgw3r2wr23r', NULL, '2025-07-07 04:40:05.508382', '2025-07-07 04:40:05.508382') RETURNING "id" /*action='create',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:27:in 'block in StoriesController#create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT /*action='create',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:27:in 'block in StoriesController#create'
+Redirected to http://localhost:3000/stories/2
+Completed 302 Found in 82ms (ActiveRecord: 3.3ms (1 query, 0 cached) | GC: 2.6ms)
+
+
+Started GET "/stories/2" for 127.0.0.1 at 2025-07-07 04:40:05 +0000
+Processing by StoriesController#show as TURBO_STREAM
+  Parameters: {"id" => "2"}
+  [1m[36mStory Load (0.7ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 2 LIMIT 1 /*action='show',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  Rendering layout layouts/application.html.erb
+  Rendering stories/show.html.erb within layouts/application
+  Rendered stories/_story.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered stories/show.html.erb within layouts/application (Duration: 5.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | GC: 0.0ms)
+Completed 200 OK in 26ms (Views: 9.5ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 1.3ms)
+
+
+Started GET "/stories" for 127.0.0.1 at 2025-07-07 04:40:09 +0000
+Processing by StoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.5ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/index.html.erb within layouts/application (Duration: 31.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 33.0ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 1.7ms)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement #to_partial_path.)
+Caused by: ArgumentError ('nil' is not an ActiveModel-compatible object. It must implement #to_partial_path.)
+
+Information for: ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement #to_partial_path.):
+    15: 
+    16: <div id="stories">
+    17:   <% @stories.each do |story| %>
+    18:     <%= render StoryDecorator.new(@story) %>
+    19:     <p>
+    20:       <%= link_to "Show this story", story %>
+    21:     </p>
+  
+app/views/stories/index.html.erb:18
+app/views/stories/index.html.erb:17
+
+Information for cause: ArgumentError ('nil' is not an ActiveModel-compatible object. It must implement #to_partial_path.):
+  
+app/views/stories/index.html.erb:18
+app/views/stories/index.html.erb:17
+Started GET "/stories" for 127.0.0.1 at 2025-07-07 04:40:45 +0000
+Processing by StoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (1.2ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 1.6ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 65.5ms | GC: 1.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 79.6ms | GC: 4.0ms)
+Completed 200 OK in 110ms (Views: 75.4ms | ActiveRecord: 7.7ms (1 query, 0 cached) | GC: 4.6ms)
+
+
+Started GET "/stories?published=true" for 127.0.0.1 at 2025-07-07 04:40:48 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => "true"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 9.8ms | GC: 1.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | GC: 1.6ms)
+Completed 200 OK in 34ms (Views: 15.5ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 2.2ms)
+
+
+Started GET "/stories?published=false" for 127.0.0.1 at 2025-07-07 04:40:50 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => "false"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.5ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 5.1ms | GC: 0.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | GC: 1.2ms)
+Completed 200 OK in 32ms (Views: 6.6ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 1.7ms)
+
+
+Started GET "/stories/2" for 127.0.0.1 at 2025-07-07 04:40:52 +0000
+Processing by StoriesController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 2 LIMIT 1 /*action='show',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  Rendering layout layouts/application.html.erb
+  Rendering stories/show.html.erb within layouts/application
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/show.html.erb within layouts/application (Duration: 16.5ms | GC: 1.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | GC: 2.7ms)
+Completed 200 OK in 68ms (Views: 21.3ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 5.7ms)
+
+
+Started GET "/stories" for 127.0.0.1 at 2025-07-07 04:40:55 +0000
+Processing by StoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 19.3ms | GC: 2.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 22.2ms | GC: 4.2ms)
+Completed 200 OK in 46ms (Views: 23.8ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 4.9ms)
+
+
+Started GET "/stories?published=true" for 127.0.0.1 at 2025-07-07 04:40:57 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => "true"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.7ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 12.1ms | GC: 1.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | GC: 2.7ms)
+Completed 200 OK in 46ms (Views: 17.1ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 4.2ms)
+
+
+Started GET "/stories?published=false" for 127.0.0.1 at 2025-07-07 04:40:58 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => "false"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 7.3ms | GC: 2.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | GC: 2.4ms)
+Completed 200 OK in 36ms (Views: 16.4ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 4.1ms)
+
+
+Started GET "/stories?published=false" for 127.0.0.1 at 2025-07-07 04:42:01 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => "false"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.5ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."published" = FALSE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/index.html.erb within layouts/application (Duration: 14.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | GC: 0.0ms)
+Completed 200 OK in 75ms (Views: 23.9ms | ActiveRecord: 2.7ms (1 query, 0 cached) | GC: 1.7ms)
+
+
+Started GET "/stories?published=" for 127.0.0.1 at 2025-07-07 04:42:04 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 1.5ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 41.1ms | GC: 0.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 45.7ms | GC: 0.8ms)
+Completed 200 OK in 72ms (Views: 40.6ms | ActiveRecord: 5.8ms (1 query, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/stories?published=true" for 127.0.0.1 at 2025-07-07 04:42:05 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => "true"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.5ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."published" = TRUE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/index.html.erb within layouts/application (Duration: 3.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | GC: 0.0ms)
+Completed 200 OK in 26ms (Views: 5.7ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?published=false" for 127.0.0.1 at 2025-07-07 04:42:07 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => "false"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."published" = FALSE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/index.html.erb within layouts/application (Duration: 5.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | GC: 0.0ms)
+Completed 200 OK in 26ms (Views: 8.3ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/stories?published=" for 127.0.0.1 at 2025-07-07 04:42:16 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 8.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | GC: 0.0ms)
+Completed 200 OK in 36ms (Views: 9.9ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories/2" for 127.0.0.1 at 2025-07-07 04:42:17 +0000
+Processing by StoriesController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mStory Load (0.7ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 2 LIMIT 1 /*action='show',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  Rendering layout layouts/application.html.erb
+  Rendering stories/show.html.erb within layouts/application
+  Rendered stories/_story.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered stories/show.html.erb within layouts/application (Duration: 9.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | GC: 0.0ms)
+Completed 200 OK in 49ms (Views: 13.7ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 1.5ms)
+
+
+Started GET "/stories" for 127.0.0.1 at 2025-07-07 04:42:23 +0000
+Processing by StoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 12.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | GC: 0.0ms)
+Completed 200 OK in 37ms (Views: 14.8ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?published=true" for 127.0.0.1 at 2025-07-07 04:42:32 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => "true"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.5ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."published" = TRUE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/index.html.erb within layouts/application (Duration: 4.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | GC: 0.0ms)
+Completed 200 OK in 37ms (Views: 5.4ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mStory Load (96.3ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /* loading for pp */ LIMIT 11 /*application='Blog'*/[0m
+Started GET "/stories?published=" for 127.0.0.1 at 2025-07-07 04:43:29 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (29.5ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 2.1ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 86.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 109.5ms | GC: 0.0ms)
+Completed 200 OK in 194ms (Views: 77.5ms | ActiveRecord: 40.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?published=true" for 127.0.0.1 at 2025-07-07 04:43:31 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => "true"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (1.1ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."published" = TRUE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/index.html.erb within layouts/application (Duration: 10.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | GC: 0.0ms)
+Completed 200 OK in 49ms (Views: 19.0ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?published=false" for 127.0.0.1 at 2025-07-07 04:43:32 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => "false"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.7ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 31.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 34.9ms | GC: 0.0ms)
+Completed 200 OK in 70ms (Views: 35.0ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?published=false" for 127.0.0.1 at 2025-07-07 04:44:30 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => "false"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (1.2ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 6.7ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 94.7ms | GC: 1.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 109.8ms | GC: 1.2ms)
+Completed 200 OK in 147ms (Views: 112.9ms | ActiveRecord: 6.8ms (1 query, 0 cached) | GC: 2.5ms)
+
+
+Started GET "/stories/2" for 127.0.0.1 at 2025-07-07 04:44:33 +0000
+Processing by StoriesController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mStory Load (2.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 2 LIMIT 1 /*action='show',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  Rendering layout layouts/application.html.erb
+  Rendering stories/show.html.erb within layouts/application
+  Rendered stories/_story.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered stories/show.html.erb within layouts/application (Duration: 5.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | GC: 0.0ms)
+Completed 200 OK in 63ms (Views: 11.6ms | ActiveRecord: 1.8ms (1 query, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/stories?published=false" for 127.0.0.1 at 2025-07-07 04:44:45 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => "false"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.8ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 3.3ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 63.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 69.8ms | GC: 0.3ms)
+Completed 200 OK in 104ms (Views: 65.8ms | ActiveRecord: 6.6ms (1 query, 0 cached) | GC: 0.9ms)
+
+
+Started POST "/stories/2/publish" for 127.0.0.1 at 2025-07-07 04:44:49 +0000
+Processing by StoriesController#publish as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "id" => "2"}
+  [1m[36mStory Load (0.3ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 2 LIMIT 1 /*action='publish',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+Completed 500 Internal Server Error in 126ms (ActiveRecord: 7.0ms (1 query, 0 cached) | GC: 12.7ms)
+
+
+  
+NameError (undefined local variable or method 'story' for an instance of StoriesController):
+  
+app/controllers/stories_controller.rb:61:in 'StoriesController#publish'
+Started GET "/stories?published=" for 127.0.0.1 at 2025-07-07 04:46:09 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.9ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 2.0ms | GC: 0.2ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 52.6ms | GC: 5.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 69.7ms | GC: 8.8ms)
+Completed 200 OK in 107ms (Views: 67.9ms | ActiveRecord: 6.8ms (1 query, 0 cached) | GC: 14.6ms)
+
+
+Started GET "/stories?published=true" for 127.0.0.1 at 2025-07-07 04:46:11 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => "true"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.7ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."published" = TRUE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/index.html.erb within layouts/application (Duration: 13.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | GC: 0.0ms)
+Completed 200 OK in 51ms (Views: 18.4ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 2.4ms)
+
+
+Started GET "/stories?published=false" for 127.0.0.1 at 2025-07-07 04:46:13 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => "false"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 13.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | GC: 2.7ms)
+Completed 200 OK in 46ms (Views: 17.0ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 2.7ms)
+
+
+Started POST "/stories/2/publish" for 127.0.0.1 at 2025-07-07 04:46:14 +0000
+Processing by StoriesController#publish as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "id" => "2"}
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 2 LIMIT 1 /*action='publish',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='publish',application='Blog',controller='stories'*/[0m
+  ↳ app/services/story_publisher.rb:17:in 'StoryPublisher#run'
+  [1m[36mStory Update (2.7ms)[0m  [1m[33mUPDATE "stories" SET "published" = TRUE, "updated_at" = '2025-07-07 04:46:14.515117' WHERE "stories"."id" = 2 /*action='publish',application='Blog',controller='stories'*/[0m
+  ↳ app/services/story_publisher.rb:17:in 'StoryPublisher#run'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT /*action='publish',application='Blog',controller='stories'*/[0m
+  ↳ app/services/story_publisher.rb:17:in 'StoryPublisher#run'
+Redirected to http://localhost:3000/stories/2
+Completed 302 Found in 126ms (ActiveRecord: 4.4ms (2 queries, 0 cached) | GC: 1.3ms)
+
+
+Started GET "/stories/2" for 127.0.0.1 at 2025-07-07 04:46:14 +0000
+Processing by StoriesController#show as TURBO_STREAM
+  Parameters: {"id" => "2"}
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 2 LIMIT 1 /*action='show',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  Rendering layout layouts/application.html.erb
+  Rendering stories/show.html.erb within layouts/application
+  Rendered stories/_story.html.erb (Duration: 0.9ms | GC: 0.5ms)
+  Rendered stories/show.html.erb within layouts/application (Duration: 12.4ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | GC: 0.5ms)
+Completed 200 OK in 38ms (Views: 15.6ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/stories" for 127.0.0.1 at 2025-07-07 04:46:17 +0000
+Processing by StoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."published" = FALSE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/index.html.erb within layouts/application (Duration: 7.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | GC: 0.0ms)
+Completed 200 OK in 38ms (Views: 11.6ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?published=true" for 127.0.0.1 at 2025-07-07 04:46:32 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => "true"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."published" = TRUE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 4.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | GC: 0.0ms)
+Completed 200 OK in 36ms (Views: 8.6ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?published=" for 127.0.0.1 at 2025-07-07 04:46:34 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.5ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 17.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | GC: 0.0ms)
+Completed 200 OK in 37ms (Views: 18.4ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?published=true" for 127.0.0.1 at 2025-07-07 04:46:39 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => "true"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."published" = TRUE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 15.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | GC: 0.0ms)
+Completed 200 OK in 47ms (Views: 19.5ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?published=false" for 127.0.0.1 at 2025-07-07 04:46:42 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => "false"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.5ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 6.2ms | GC: 0.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | GC: 0.3ms)
+Completed 200 OK in 52ms (Views: 19.3ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.3ms)
+
+
+Started GET "/stories?published=true" for 127.0.0.1 at 2025-07-07 04:46:53 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => "true"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.7ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."published" = TRUE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 12.5ms | GC: 3.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | GC: 3.7ms)
+Completed 200 OK in 46ms (Views: 15.8ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 3.7ms)
+
+
+  [1m[36mStory Load (118.9ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /* loading for pp */ LIMIT 11 /*application='Blog'*/[0m
+Started GET "/stories?published=true" for 127.0.0.1 at 2025-07-07 04:47:22 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => "true"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."published" = TRUE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 12.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | GC: 0.0ms)
+Completed 200 OK in 30ms (Views: 12.5ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?published=false" for 127.0.0.1 at 2025-07-07 04:47:24 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => "false"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 3.1ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 29.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 31.2ms | GC: 0.0ms)
+Completed 200 OK in 63ms (Views: 31.2ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?published=" for 127.0.0.1 at 2025-07-07 04:50:15 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (31.9ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 4.4ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 88.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 109.8ms | GC: 0.0ms)
+Completed 200 OK in 179ms (Views: 72.9ms | ActiveRecord: 45.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?published=true" for 127.0.0.1 at 2025-07-07 04:50:19 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => "true"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (1.0ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."published" = TRUE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 23.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 30.2ms | GC: 0.0ms)
+Completed 200 OK in 59ms (Views: 30.7ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?published=false" for 127.0.0.1 at 2025-07-07 04:50:21 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => "false"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.7ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 5.4ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 22.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | GC: 0.0ms)
+Completed 200 OK in 52ms (Views: 26.9ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?published=" for 127.0.0.1 at 2025-07-07 04:50:47 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (32.5ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 4.2ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 91.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 112.0ms | GC: 0.0ms)
+Completed 200 OK in 182ms (Views: 74.1ms | ActiveRecord: 46.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?published=true" for 127.0.0.1 at 2025-07-07 04:50:49 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => "true"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (1.1ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."published" = TRUE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 24.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 31.1ms | GC: 0.0ms)
+Completed 200 OK in 67ms (Views: 31.7ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?published=false" for 127.0.0.1 at 2025-07-07 04:50:51 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => "false"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."published" IS NULL /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/index.html.erb within layouts/application (Duration: 12.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | GC: 0.0ms)
+Completed 200 OK in 44ms (Views: 18.2ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories/new" for 127.0.0.1 at 2025-07-07 04:50:52 +0000
+Processing by StoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form.html.erb (Duration: 20.8ms | GC: 0.0ms)
+  Rendered stories/new.html.erb within layouts/application (Duration: 42.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 45.1ms | GC: 0.0ms)
+Completed 200 OK in 70ms (Views: 51.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/stories" for 127.0.0.1 at 2025-07-07 04:50:58 +0000
+Processing by StoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "story" => {"title" => "Titulo2", "body" => "2tr3t23t"}, "commit" => "Create Story"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN /*action='create',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:27:in 'block in StoriesController#create'
+  [1m[36mStory Create (2.6ms)[0m  [1m[32mINSERT INTO "stories" ("title", "body", "published", "created_at", "updated_at") VALUES ('Titulo2', '2tr3t23t', NULL, '2025-07-07 04:50:58.215690', '2025-07-07 04:50:58.215690') RETURNING "id" /*action='create',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:27:in 'block in StoriesController#create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT /*action='create',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:27:in 'block in StoriesController#create'
+Redirected to http://localhost:3000/stories/3
+Completed 302 Found in 103ms (ActiveRecord: 4.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories/3" for 127.0.0.1 at 2025-07-07 04:50:58 +0000
+Processing by StoriesController#show as TURBO_STREAM
+  Parameters: {"id" => "3"}
+  [1m[36mStory Load (2.5ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 3 LIMIT 1 /*action='show',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  Rendering layout layouts/application.html.erb
+  Rendering stories/show.html.erb within layouts/application
+  Rendered stories/_story.html.erb (Duration: 6.3ms | GC: 0.0ms)
+  Rendered stories/show.html.erb within layouts/application (Duration: 9.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | GC: 0.0ms)
+Completed 200 OK in 59ms (Views: 12.7ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories" for 127.0.0.1 at 2025-07-07 04:50:59 +0000
+Processing by StoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 25.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 28.8ms | GC: 0.0ms)
+Completed 200 OK in 61ms (Views: 29.9ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?published=true" for 127.0.0.1 at 2025-07-07 04:51:01 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => "true"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."published" = TRUE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 26.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 27.6ms | GC: 0.0ms)
+Completed 200 OK in 49ms (Views: 29.4ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?published=false" for 127.0.0.1 at 2025-07-07 04:51:03 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => "false"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."published" IS NULL /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:17
+  Rendered stories/_story.html.erb (Duration: 0.7ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 5.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | GC: 0.0ms)
+Completed 200 OK in 27ms (Views: 9.5ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?published=false" for 127.0.0.1 at 2025-07-07 04:55:01 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+Processing by StoriesController#index as HTML
+  Parameters: {"published" => "false"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."published" = FALSE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/index.html.erb within layouts/application (Duration: 11.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 34.5ms | GC: 0.0ms)
+Completed 200 OK in 148ms (Views: 42.4ms | ActiveRecord: 9.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=&published=" for 127.0.0.1 at 2025-07-07 04:55:04 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "", "published" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (1.7ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 5.0ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 93.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 102.3ms | GC: 0.0ms)
+Completed 200 OK in 131ms (Views: 97.5ms | ActiveRecord: 6.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=titu&published=&commit=Buscar" for 127.0.0.1 at 2025-07-07 04:55:11 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "titu", "published" => "", "commit" => "Buscar"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (2.2ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE (title ILIKE '%titu%') /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 5.6ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 1.7ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 24.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 30.5ms | GC: 0.0ms)
+Completed 200 OK in 64ms (Views: 29.3ms | ActiveRecord: 2.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=titu&published=true" for 127.0.0.1 at 2025-07-07 04:55:13 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "titu", "published" => "true"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.7ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE (title ILIKE '%titu%') AND "stories"."published" = TRUE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 3.1ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 20.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | GC: 0.0ms)
+Completed 200 OK in 45ms (Views: 27.8ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=titu&published=false" for 127.0.0.1 at 2025-07-07 04:55:15 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "titu", "published" => "false"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE (title ILIKE '%titu%') AND "stories"."published" = FALSE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/index.html.erb within layouts/application (Duration: 17.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | GC: 0.0ms)
+Completed 200 OK in 46ms (Views: 20.5ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=titu&published=false&commit=Buscar" for 127.0.0.1 at 2025-07-07 04:55:17 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "titu", "published" => "false", "commit" => "Buscar"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE (title ILIKE '%titu%') AND "stories"."published" = FALSE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/index.html.erb within layouts/application (Duration: 5.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | GC: 0.0ms)
+Completed 200 OK in 44ms (Views: 7.1ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=titu&published=" for 127.0.0.1 at 2025-07-07 04:55:19 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "titu", "published" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (2.7ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE (title ILIKE '%titu%') /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 24.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | GC: 0.0ms)
+Completed 200 OK in 53ms (Views: 26.5ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=titu&published=false" for 127.0.0.1 at 2025-07-07 04:55:25 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "titu", "published" => "false"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.7ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE (title ILIKE '%titu%') AND "stories"."published" = FALSE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/index.html.erb within layouts/application (Duration: 8.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | GC: 0.0ms)
+Completed 200 OK in 34ms (Views: 12.2ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=titu&published=true" for 127.0.0.1 at 2025-07-07 04:55:35 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "titu", "published" => "true"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE (title ILIKE '%titu%') AND "stories"."published" = TRUE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 16.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | GC: 0.0ms)
+Completed 200 OK in 44ms (Views: 17.8ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=titu&published=false" for 127.0.0.1 at 2025-07-07 04:55:38 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "titu", "published" => "false"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.7ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE (title ILIKE '%titu%') AND "stories"."published" = FALSE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/index.html.erb within layouts/application (Duration: 20.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | GC: 0.0ms)
+Completed 200 OK in 46ms (Views: 22.9ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=titu&published=" for 127.0.0.1 at 2025-07-07 04:59:47 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "titu", "published" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.7ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE (title ILIKE '%titu%') /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 5.1ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 102.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 128.7ms | GC: 0.0ms)
+Completed 200 OK in 199ms (Views: 124.5ms | ActiveRecord: 12.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=titu&published=&commit=Buscar" for 127.0.0.1 at 2025-07-07 04:59:49 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "titu", "published" => "", "commit" => "Buscar"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.8ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE (title ILIKE '%titu%') /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 4.0ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 31.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 37.5ms | GC: 0.0ms)
+Completed 200 OK in 66ms (Views: 38.6ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=titu&published=true" for 127.0.0.1 at 2025-07-07 04:59:50 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "titu", "published" => "true"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.9ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE (title ILIKE '%titu%') AND "stories"."published" = TRUE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 7.6ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 25.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 31.0ms | GC: 0.0ms)
+Completed 200 OK in 53ms (Views: 30.5ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=titu&published=false" for 127.0.0.1 at 2025-07-07 04:59:53 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "titu", "published" => "false"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (1.5ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE (title ILIKE '%titu%') AND "stories"."published" IS NULL /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 17.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | GC: 0.0ms)
+Completed 200 OK in 45ms (Views: 24.4ms | ActiveRecord: 1.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/stories/3/publish" for 127.0.0.1 at 2025-07-07 04:59:56 +0000
+Processing by StoriesController#publish as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "id" => "3"}
+  [1m[36mStory Load (0.9ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 3 LIMIT 1 /*action='publish',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='publish',application='Blog',controller='stories'*/[0m
+  ↳ app/services/story_publisher.rb:17:in 'StoryPublisher#run'
+  [1m[36mStory Update (6.4ms)[0m  [1m[33mUPDATE "stories" SET "published" = TRUE, "updated_at" = '2025-07-07 04:59:56.184120' WHERE "stories"."id" = 3 /*action='publish',application='Blog',controller='stories'*/[0m
+  ↳ app/services/story_publisher.rb:17:in 'StoryPublisher#run'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT /*action='publish',application='Blog',controller='stories'*/[0m
+  ↳ app/services/story_publisher.rb:17:in 'StoryPublisher#run'
+Redirected to http://localhost:3000/stories/3
+Completed 302 Found in 137ms (ActiveRecord: 6.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories/3" for 127.0.0.1 at 2025-07-07 04:59:56 +0000
+Processing by StoriesController#show as TURBO_STREAM
+  Parameters: {"id" => "3"}
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 3 LIMIT 1 /*action='show',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  Rendering layout layouts/application.html.erb
+  Rendering stories/show.html.erb within layouts/application
+  Rendered stories/_story.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered stories/show.html.erb within layouts/application (Duration: 17.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | GC: 0.0ms)
+Completed 200 OK in 59ms (Views: 24.0ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories" for 127.0.0.1 at 2025-07-07 04:59:58 +0000
+Processing by StoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.7ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 19.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | GC: 0.0ms)
+Completed 200 OK in 54ms (Views: 26.1ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=&published=true" for 127.0.0.1 at 2025-07-07 05:00:00 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "", "published" => "true"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."published" = TRUE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 25.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 26.3ms | GC: 0.0ms)
+Completed 200 OK in 50ms (Views: 27.1ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=&published=false" for 127.0.0.1 at 2025-07-07 05:00:01 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "", "published" => "false"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."published" IS NULL /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/index.html.erb within layouts/application (Duration: 21.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | GC: 0.0ms)
+Completed 200 OK in 43ms (Views: 24.5ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=gfgf&published=false&commit=Buscar" for 127.0.0.1 at 2025-07-07 05:00:07 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "gfgf", "published" => "false", "commit" => "Buscar"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (1.0ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE (title ILIKE '%gfgf%') AND "stories"."published" IS NULL /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/index.html.erb within layouts/application (Duration: 7.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | GC: 0.0ms)
+Completed 200 OK in 37ms (Views: 8.2ms | ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=gfgf&published=false&commit=Buscar" for 127.0.0.1 at 2025-07-07 05:00:37 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "gfgf", "published" => "false", "commit" => "Buscar"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.2ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE (title ILIKE '%gfgf%') AND "stories"."published" IS NULL /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:26
+  Rendered stories/index.html.erb within layouts/application (Duration: 17.2ms | GC: 1.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 28.6ms | GC: 1.3ms)
+Completed 200 OK in 84ms (Views: 31.3ms | ActiveRecord: 1.8ms (1 query, 0 cached) | GC: 1.3ms)
+
+
+Started GET "/stories?search=gfgf&published=" for 127.0.0.1 at 2025-07-07 05:00:40 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "gfgf", "published" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.7ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE (title ILIKE '%gfgf%') /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:26
+  Rendered stories/index.html.erb within layouts/application (Duration: 9.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | GC: 0.0ms)
+Completed 200 OK in 34ms (Views: 12.3ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=gfgf&published=true" for 127.0.0.1 at 2025-07-07 05:00:43 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "gfgf", "published" => "true"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.9ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE (title ILIKE '%gfgf%') AND "stories"."published" = TRUE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:26
+  Rendered stories/index.html.erb within layouts/application (Duration: 5.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | GC: 0.0ms)
+Completed 200 OK in 39ms (Views: 8.3ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=gfgf&published=false" for 127.0.0.1 at 2025-07-07 05:00:44 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "gfgf", "published" => "false"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.4ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE (title ILIKE '%gfgf%') AND "stories"."published" IS NULL /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:26
+  Rendered stories/index.html.erb within layouts/application (Duration: 4.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | GC: 0.0ms)
+Completed 200 OK in 24ms (Views: 5.8ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=gfgf&published=" for 127.0.0.1 at 2025-07-07 05:00:46 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "gfgf", "published" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE (title ILIKE '%gfgf%') /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:26
+  Rendered stories/index.html.erb within layouts/application (Duration: 14.8ms | GC: 1.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | GC: 1.3ms)
+Completed 200 OK in 43ms (Views: 17.0ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 1.3ms)
+
+
+Started GET "/stories?search=&published=true" for 127.0.0.1 at 2025-07-07 05:00:50 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "", "published" => "true"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."published" = TRUE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:26
+  Rendered stories/_story.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 56.2ms | GC: 0.9ms)
+  Rendered layout layouts/application.html.erb (Duration: 63.1ms | GC: 0.9ms)
+Completed 200 OK in 103ms (Views: 64.4ms | ActiveRecord: 4.5ms (1 query, 0 cached) | GC: 0.9ms)
+
+
+Started GET "/stories?search=&published=false" for 127.0.0.1 at 2025-07-07 05:00:52 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "", "published" => "false"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.5ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."published" IS NULL /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:26
+  Rendered stories/index.html.erb within layouts/application (Duration: 7.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | GC: 0.0ms)
+Completed 200 OK in 31ms (Views: 10.6ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=&published=" for 127.0.0.1 at 2025-07-07 05:00:53 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "", "published" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:26
+  Rendered stories/_story.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 2.4ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 24.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 25.5ms | GC: 0.0ms)
+Completed 200 OK in 49ms (Views: 29.2ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=&published=" for 127.0.0.1 at 2025-07-07 05:01:17 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "", "published" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (1.1ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 2.0ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 52.9ms | GC: 0.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 66.8ms | GC: 2.7ms)
+Completed 200 OK in 95ms (Views: 62.6ms | ActiveRecord: 6.7ms (1 query, 0 cached) | GC: 2.7ms)
+
+
+Started GET "/stories?search=&published=" for 127.0.0.1 at 2025-07-07 05:02:03 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "", "published" => ""}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (1.2ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 1.5ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 50.7ms | GC: 6.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 56.4ms | GC: 6.4ms)
+Completed 200 OK in 87ms (Views: 53.5ms | ActiveRecord: 6.9ms (1 query, 0 cached) | GC: 8.8ms)
+
+
+Started GET "/stories?search=&published=false&commit=Buscar" for 127.0.0.1 at 2025-07-07 05:02:06 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "", "published" => "false", "commit" => "Buscar"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."published" IS NULL /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/index.html.erb within layouts/application (Duration: 7.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | GC: 0.0ms)
+Completed 200 OK in 43ms (Views: 11.1ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=&published=&commit=Buscar" for 127.0.0.1 at 2025-07-07 05:02:09 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "", "published" => "", "commit" => "Buscar"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 9.4ms | GC: 1.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | GC: 1.3ms)
+Completed 200 OK in 41ms (Views: 10.4ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 1.3ms)
+
+
+Started GET "/stories/2" for 127.0.0.1 at 2025-07-07 05:02:23 +0000
+Processing by StoriesController#show as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mStory Load (0.8ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 2 LIMIT 1 /*action='show',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  Rendering layout layouts/application.html.erb
+  Rendering stories/show.html.erb within layouts/application
+  Rendered stories/_story.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered stories/show.html.erb within layouts/application (Duration: 8.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | GC: 0.0ms)
+Completed 200 OK in 44ms (Views: 12.7ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories/2/edit" for 127.0.0.1 at 2025-07-07 05:02:24 +0000
+Processing by StoriesController#edit as HTML
+  Parameters: {"id" => "2"}
+  [1m[36mStory Load (0.7ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 2 LIMIT 1 /*action='edit',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  Rendering layout layouts/application.html.erb
+  Rendering stories/edit.html.erb within layouts/application
+  Rendered stories/_form.html.erb (Duration: 22.9ms | GC: 1.2ms)
+  Rendered stories/edit.html.erb within layouts/application (Duration: 28.2ms | GC: 1.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 32.8ms | GC: 1.2ms)
+Completed 200 OK in 69ms (Views: 33.3ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 1.2ms)
+
+
+Started PATCH "/stories/2" for 127.0.0.1 at 2025-07-07 05:02:48 +0000
+Processing by StoriesController#update as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "story" => {"title" => "Titulo1", "body" => "fdfgw3r2wr23rffffffffffffffffffffffffffffffffffffffffffffffffffffffffff34333333333333333r3r3f2f23r23r3f2f33f2f23f23ffffffffffffffffffffffffffffffffffffffffffffffff"}, "commit" => "Update Story", "id" => "2"}
+  [1m[36mStory Load (0.4ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 2 LIMIT 1 /*action='update',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='update',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:40:in 'block in StoriesController#update'
+  [1m[36mStory Update (2.4ms)[0m  [1m[33mUPDATE "stories" SET "body" = 'fdfgw3r2wr23rffffffffffffffffffffffffffffffffffffffffffffffffffffffffff34333333333333333r3r3f2f23r23r3f2f33f2f23f23ffffffffffffffffffffffffffffffffffffffffffffffff', "updated_at" = '2025-07-07 05:02:48.411492' WHERE "stories"."id" = 2 /*action='update',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:40:in 'block in StoriesController#update'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT /*action='update',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:40:in 'block in StoriesController#update'
+Redirected to http://localhost:3000/stories/2
+Completed 302 Found in 100ms (ActiveRecord: 10.1ms (2 queries, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/stories/2" for 127.0.0.1 at 2025-07-07 05:02:48 +0000
+Processing by StoriesController#show as TURBO_STREAM
+  Parameters: {"id" => "2"}
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 2 LIMIT 1 /*action='show',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  Rendering layout layouts/application.html.erb
+  Rendering stories/show.html.erb within layouts/application
+  Rendered stories/_story.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered stories/show.html.erb within layouts/application (Duration: 16.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 24.0ms | GC: 0.0ms)
+Completed 200 OK in 48ms (Views: 28.1ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/stories" for 127.0.0.1 at 2025-07-07 05:02:54 +0000
+Processing by StoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 10.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | GC: 0.0ms)
+Completed 200 OK in 39ms (Views: 15.5ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/stories/new" for 127.0.0.1 at 2025-07-07 05:07:29 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+Processing by StoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form.html.erb (Duration: 2.1ms | GC: 0.0ms)
+  Rendered stories/new.html.erb within layouts/application (Duration: 4.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method 'story_forms_path' for an instance of #<Class:0x00007609a2f55ab0>)
+Caused by: NoMethodError (undefined method 'story_forms_path' for an instance of #<Class:0x00007609a2f55ab0>)
+
+Information for: ActionView::Template::Error (undefined method 'story_forms_path' for an instance of #<Class:0x00007609a2f55ab0>):
+    1: <%= form_with(model: story) do |form| %>
+    2:   <% if story.errors.any? %>
+    3:     <div style="color: red">
+    4:       <h2><%= pluralize(story.errors.count, "error") %> prohibited this story from being saved:</h2>
+  
+app/views/stories/_form.html.erb:1
+app/views/stories/new.html.erb:5
+
+Information for cause: NoMethodError (undefined method 'story_forms_path' for an instance of #<Class:0x00007609a2f55ab0>):
+  
+app/views/stories/_form.html.erb:1
+app/views/stories/new.html.erb:5
+Started GET "/stories" for 127.0.0.1 at 2025-07-07 05:10:22 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+Processing by StoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (33.5ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 5.0ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 101.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 129.2ms | GC: 0.0ms)
+Completed 200 OK in 200ms (Views: 89.3ms | ActiveRecord: 48.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories/new" for 127.0.0.1 at 2025-07-07 05:10:24 +0000
+Processing by StoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form.html.erb (Duration: 6.4ms | GC: 0.0ms)
+  Rendered stories/new.html.erb within layouts/application (Duration: 12.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 17.3ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method 'errors' for nil)
+Caused by: NoMethodError (undefined method 'errors' for nil)
+
+Information for: ActionView::Template::Error (undefined method 'errors' for nil):
+    1: <%= form_with(model: @story_form, url: stories_path, local: true) do |form| %>
+    2:   <% if story.errors.any? %>
+    3:     <div style="color: red">
+    4:       <h2><%= pluralize(story.errors.count, "error") %> prohibited this story from being saved:</h2>
+    5: 
+  
+app/views/stories/_form.html.erb:2
+app/views/stories/_form.html.erb:1
+app/views/stories/new.html.erb:5
+
+Information for cause: NoMethodError (undefined method 'errors' for nil):
+  
+app/views/stories/_form.html.erb:2
+app/views/stories/_form.html.erb:1
+app/views/stories/new.html.erb:5
+Started GET "/stories" for 127.0.0.1 at 2025-07-07 05:10:56 +0000
+Processing by StoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (1.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 5.5ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 78.0ms | GC: 1.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 94.3ms | GC: 2.9ms)
+Completed 200 OK in 127ms (Views: 91.7ms | ActiveRecord: 6.3ms (1 query, 0 cached) | GC: 2.9ms)
+
+
+Started GET "/stories/new" for 127.0.0.1 at 2025-07-07 05:10:58 +0000
+Processing by StoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  Rendered stories/new.html.erb within layouts/application (Duration: 3.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method 'story_form' for an instance of #<Class:0x000074b21fdafd40>)
+Caused by: NameError (undefined local variable or method 'story_form' for an instance of #<Class:0x000074b21fdafd40>)
+
+Information for: ActionView::Template::Error (undefined local variable or method 'story_form' for an instance of #<Class:0x000074b21fdafd40>):
+    1: <%= form_with(model: story_form, url: stories_path, local: true) do |form| %>
+    2:   <% if story_form.errors.any? %>
+    3:     <div style="color: red">
+    4:       <h2><%= pluralize(story_form.errors.count, "error") %> prohibited this story from being saved:</h2>
+  
+app/views/stories/_form.html.erb:1
+app/views/stories/new.html.erb:5
+
+Information for cause: NameError (undefined local variable or method 'story_form' for an instance of #<Class:0x000074b21fdafd40>):
+  
+app/views/stories/_form.html.erb:1
+app/views/stories/new.html.erb:5
+Started GET "/stories" for 127.0.0.1 at 2025-07-07 05:11:26 +0000
+Processing by StoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.9ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 3.9ms | GC: 0.7ms)
+  Rendered stories/_story.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 71.9ms | GC: 8.8ms)
+  Rendered layout layouts/application.html.erb (Duration: 98.6ms | GC: 26.3ms)
+Completed 200 OK in 137ms (Views: 97.1ms | ActiveRecord: 6.7ms (1 query, 0 cached) | GC: 32.7ms)
+
+
+Started GET "/stories/new" for 127.0.0.1 at 2025-07-07 05:11:28 +0000
+Processing by StoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form.html.erb (Duration: 3.5ms | GC: 0.0ms)
+  Rendered stories/new.html.erb within layouts/application (Duration: 4.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 4.0ms)
+
+
+  
+ActionView::Template::Error (Passed nil to the :model argument, expect an object or false)
+Caused by: ArgumentError (Passed nil to the :model argument, expect an object or false)
+
+Information for: ActionView::Template::Error (Passed nil to the :model argument, expect an object or false):
+    1: <%= form_with(model: story_form, url: stories_path, local: true) do |form| %>
+    2:   <% if story_form.errors.any? %>
+    3:     <div style="color: red">
+    4:       <h2><%= pluralize(story_form.errors.count, "error") %> prohibited this story from being saved:</h2>
+  
+app/views/stories/_form.html.erb:1
+app/views/stories/new.html.erb:5
+
+Information for cause: ArgumentError (Passed nil to the :model argument, expect an object or false):
+  
+app/views/stories/_form.html.erb:1
+app/views/stories/new.html.erb:5
+Started GET "/stories" for 127.0.0.1 at 2025-07-07 05:11:40 +0000
+Processing by StoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (1.8ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 44.2ms | GC: 2.5ms)
+  Rendered layout layouts/application.html.erb (Duration: 50.4ms | GC: 2.5ms)
+Completed 200 OK in 83ms (Views: 44.7ms | ActiveRecord: 7.8ms (1 query, 0 cached) | GC: 2.5ms)
+
+
+Started GET "/stories/new" for 127.0.0.1 at 2025-07-07 05:11:41 +0000
+Processing by StoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form.html.erb (Duration: 15.4ms | GC: 0.0ms)
+  Rendered stories/new.html.erb within layouts/application (Duration: 17.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | GC: 0.0ms)
+Completed 200 OK in 46ms (Views: 22.3ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/stories" for 127.0.0.1 at 2025-07-07 05:11:45 +0000
+Processing by StoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "story_form" => {"title" => "455", "body" => "234"}, "commit" => "Create Story form"}
+Completed 400 Bad Request in 19ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty or invalid: story):
+  
+app/controllers/stories_controller.rb:73:in 'StoriesController#story_params'
+app/controllers/stories_controller.rb:24:in 'StoriesController#create'
+Started GET "/stories/new" for 127.0.0.1 at 2025-07-07 05:11:46 +0000
+Processing by StoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form.html.erb (Duration: 12.8ms | GC: 0.0ms)
+  Rendered stories/new.html.erb within layouts/application (Duration: 14.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | GC: 0.0ms)
+Completed 200 OK in 33ms (Views: 17.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/stories" for 127.0.0.1 at 2025-07-07 05:13:55 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+Processing by StoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "story_form" => {"title" => "65", "body" => "65656"}, "commit" => "Create Story form"}
+Completed 400 Bad Request in 49ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty or invalid: story):
+  
+app/controllers/stories_controller.rb:73:in 'StoriesController#story_params'
+app/controllers/stories_controller.rb:24:in 'StoriesController#create'
+Started GET "/stories/new" for 127.0.0.1 at 2025-07-07 05:13:56 +0000
+Processing by StoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form.html.erb (Duration: 11.3ms | GC: 0.6ms)
+  Rendered stories/new.html.erb within layouts/application (Duration: 15.9ms | GC: 0.6ms)
+  Rendered layout layouts/application.html.erb (Duration: 38.0ms | GC: 3.8ms)
+Completed 200 OK in 63ms (Views: 41.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 3.8ms)
+
+
+Started GET "/stories" for 127.0.0.1 at 2025-07-07 05:14:04 +0000
+Processing by StoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (40.3ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 132.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 135.3ms | GC: 0.0ms)
+Completed 200 OK in 172ms (Views: 83.7ms | ActiveRecord: 55.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=&published=&commit=Buscar" for 127.0.0.1 at 2025-07-07 05:14:05 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "", "published" => "", "commit" => "Buscar"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 4.9ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 1.0ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 16.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | GC: 0.0ms)
+Completed 200 OK in 40ms (Views: 20.2ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories/new" for 127.0.0.1 at 2025-07-07 05:16:07 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+Processing by StoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form.html.erb (Duration: 13.8ms | GC: 0.0ms)
+  Rendered stories/new.html.erb within layouts/application (Duration: 16.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 41.1ms | GC: 0.0ms)
+Completed 200 OK in 112ms (Views: 49.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/stories" for 127.0.0.1 at 2025-07-07 05:16:11 +0000
+Processing by StoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "story_form" => {"title" => "2", "body" => "324"}, "commit" => "Create Story form"}
+Completed 400 Bad Request in 26ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty or invalid: story):
+  
+app/controllers/stories_controller.rb:73:in 'StoriesController#story_params'
+app/controllers/stories_controller.rb:24:in 'StoriesController#create'
+Started GET "/stories/new" for 127.0.0.1 at 2025-07-07 05:16:11 +0000
+Processing by StoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form.html.erb (Duration: 10.3ms | GC: 0.0ms)
+  Rendered stories/new.html.erb within layouts/application (Duration: 11.4ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | GC: 0.0ms)
+Completed 200 OK in 41ms (Views: 18.4ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=&published=&commit=Buscar" for 127.0.0.1 at 2025-07-07 05:21:05 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "", "published" => "", "commit" => "Buscar"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (36.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 4.9ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 106.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 134.3ms | GC: 0.0ms)
+Completed 200 OK in 218ms (Views: 93.0ms | ActiveRecord: 51.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=&published=false&commit=Buscar" for 127.0.0.1 at 2025-07-07 05:21:09 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "", "published" => "false", "commit" => "Buscar"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (1.1ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."published" = FALSE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/index.html.erb within layouts/application (Duration: 12.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | GC: 0.0ms)
+Completed 200 OK in 48ms (Views: 18.9ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=&published=true&commit=Buscar" for 127.0.0.1 at 2025-07-07 05:21:11 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "", "published" => "true", "commit" => "Buscar"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."published" = TRUE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 4.1ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 30.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 34.4ms | GC: 0.0ms)
+Completed 200 OK in 53ms (Views: 34.5ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=&published=&commit=Buscar" for 127.0.0.1 at 2025-07-07 05:21:12 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "", "published" => "", "commit" => "Buscar"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.5ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 3.9ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 12.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | GC: 0.0ms)
+Completed 200 OK in 40ms (Views: 21.5ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories/new" for 127.0.0.1 at 2025-07-07 05:21:13 +0000
+Processing by StoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form.html.erb (Duration: 13.1ms | GC: 0.0ms)
+  Rendered stories/new.html.erb within layouts/application (Duration: 32.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 34.8ms | GC: 0.0ms)
+Completed 200 OK in 78ms (Views: 35.6ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/stories" for 127.0.0.1 at 2025-07-07 05:21:15 +0000
+Processing by StoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "story_form" => {"title" => "543", "body" => "3534"}, "commit" => "Create Story form"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form.html.erb (Duration: 32.8ms | GC: 0.0ms)
+  Rendered stories/new.html.erb within layouts/application (Duration: 35.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 36.7ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 70ms (Views: 42.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/stories" for 127.0.0.1 at 2025-07-07 05:21:19 +0000
+Processing by StoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "story_form" => {"title" => "543", "body" => "3534654456456456564456456465"}, "commit" => "Create Story form"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN /*action='create',application='Blog',controller='stories'*/[0m
+  ↳ app/forms/story_form.rb:11:in 'StoryForm#save'
+  [1m[36mStory Create (2.5ms)[0m  [1m[32mINSERT INTO "stories" ("title", "body", "published", "created_at", "updated_at") VALUES ('543', '3534654456456456564456456465', FALSE, '2025-07-07 05:21:19.765112', '2025-07-07 05:21:19.765112') RETURNING "id" /*action='create',application='Blog',controller='stories'*/[0m
+  ↳ app/forms/story_form.rb:11:in 'StoryForm#save'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT /*action='create',application='Blog',controller='stories'*/[0m
+  ↳ app/forms/story_form.rb:11:in 'StoryForm#save'
+Redirected to http://localhost:3000/stories
+Completed 302 Found in 111ms (ActiveRecord: 3.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories" for 127.0.0.1 at 2025-07-07 05:21:19 +0000
+Processing by StoriesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (1.1ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 17.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | GC: 0.0ms)
+Completed 200 OK in 37ms (Views: 19.6ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=&published=true&commit=Buscar" for 127.0.0.1 at 2025-07-07 05:21:22 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "", "published" => "true", "commit" => "Buscar"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."published" = TRUE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 21.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | GC: 0.0ms)
+Completed 200 OK in 44ms (Views: 25.2ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=&published=false&commit=Buscar" for 127.0.0.1 at 2025-07-07 05:21:24 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "", "published" => "false", "commit" => "Buscar"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."published" = FALSE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 1.5ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 25.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 25.7ms | GC: 0.0ms)
+Completed 200 OK in 48ms (Views: 26.2ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/stories/4/publish" for 127.0.0.1 at 2025-07-07 05:21:26 +0000
+Processing by StoriesController#publish as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "id" => "4"}
+  [1m[36mStory Load (1.4ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 4 LIMIT 1 /*action='publish',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='publish',application='Blog',controller='stories'*/[0m
+  ↳ app/services/story_publisher.rb:17:in 'StoryPublisher#run'
+  [1m[36mStory Update (2.2ms)[0m  [1m[33mUPDATE "stories" SET "published" = TRUE, "updated_at" = '2025-07-07 05:21:26.811005' WHERE "stories"."id" = 4 /*action='publish',application='Blog',controller='stories'*/[0m
+  ↳ app/services/story_publisher.rb:17:in 'StoryPublisher#run'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT /*action='publish',application='Blog',controller='stories'*/[0m
+  ↳ app/services/story_publisher.rb:17:in 'StoryPublisher#run'
+Redirected to http://localhost:3000/stories/4
+Completed 302 Found in 75ms (ActiveRecord: 4.5ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories/4" for 127.0.0.1 at 2025-07-07 05:21:26 +0000
+Processing by StoriesController#show as TURBO_STREAM
+  Parameters: {"id" => "4"}
+  [1m[36mStory Load (0.7ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 4 LIMIT 1 /*action='show',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  Rendering layout layouts/application.html.erb
+  Rendering stories/show.html.erb within layouts/application
+  Rendered stories/_story.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered stories/show.html.erb within layouts/application (Duration: 8.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | GC: 0.0ms)
+Completed 200 OK in 38ms (Views: 11.5ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories" for 127.0.0.1 at 2025-07-07 05:21:28 +0000
+Processing by StoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 2.2ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 1.4ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 17.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | GC: 0.0ms)
+Completed 200 OK in 40ms (Views: 19.4ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories/4" for 127.0.0.1 at 2025-07-07 05:21:29 +0000
+Processing by StoriesController#show as HTML
+  Parameters: {"id" => "4"}
+  [1m[36mStory Load (0.8ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 4 LIMIT 1 /*action='show',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  Rendering layout layouts/application.html.erb
+  Rendering stories/show.html.erb within layouts/application
+  Rendered stories/_story.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered stories/show.html.erb within layouts/application (Duration: 4.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | GC: 0.0ms)
+Completed 200 OK in 35ms (Views: 12.0ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories/4/edit" for 127.0.0.1 at 2025-07-07 05:21:31 +0000
+Processing by StoriesController#edit as HTML
+  Parameters: {"id" => "4"}
+  [1m[36mStory Load (0.8ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 4 LIMIT 1 /*action='edit',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  Rendering layout layouts/application.html.erb
+  Rendering stories/edit.html.erb within layouts/application
+  Rendered stories/_form.html.erb (Duration: 2.2ms | GC: 0.0ms)
+  Rendered stories/edit.html.erb within layouts/application (Duration: 3.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method 'story_form' for an instance of #<Class:0x0000730bfa28f518>)
+Caused by: NameError (undefined local variable or method 'story_form' for an instance of #<Class:0x0000730bfa28f518>)
+
+Information for: ActionView::Template::Error (undefined local variable or method 'story_form' for an instance of #<Class:0x0000730bfa28f518>):
+    1: <%= form_with(model: story_form, url: stories_path, local: true) do |form| %>
+    2:   <% if story_form.errors.any? %>
+    3:     <div style="color: red">
+    4:       <h2><%= pluralize(story_form.errors.count, "error") %> prohibited this story from being saved:</h2>
+  
+app/views/stories/_form.html.erb:1
+app/views/stories/edit.html.erb:5
+
+Information for cause: NameError (undefined local variable or method 'story_form' for an instance of #<Class:0x0000730bfa28f518>):
+  
+app/views/stories/_form.html.erb:1
+app/views/stories/edit.html.erb:5
+Started GET "/stories/4" for 127.0.0.1 at 2025-07-07 05:23:28 +0000
+Processing by StoriesController#show as HTML
+  Parameters: {"id" => "4"}
+  [1m[36mStory Load (0.4ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 4 LIMIT 1 /*action='show',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  Rendering layout layouts/application.html.erb
+  Rendering stories/show.html.erb within layouts/application
+  Rendered stories/show.html.erb within layouts/application (Duration: 7.5ms | GC: 1.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | GC: 1.4ms)
+Completed 500 Internal Server Error in 101ms (ActiveRecord: 7.6ms (1 query, 0 cached) | GC: 16.0ms)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement #to_partial_path.)
+Caused by: ArgumentError ('nil' is not an ActiveModel-compatible object. It must implement #to_partial_path.)
+
+Information for: ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement #to_partial_path.):
+    1: <p style="color: green"><%= notice %></p>
+    2: 
+    3: <%= render StoryDecorator.new(@story) %>
+    4: 
+    5: <div>
+    6:   <%= link_to "Edit this story", edit_story_path(@story) %> |
+  
+app/views/stories/show.html.erb:3
+
+Information for cause: ArgumentError ('nil' is not an ActiveModel-compatible object. It must implement #to_partial_path.):
+  
+app/views/stories/show.html.erb:3
+Started GET "/stories/4" for 127.0.0.1 at 2025-07-07 05:23:30 +0000
+Processing by StoriesController#show as HTML
+  Parameters: {"id" => "4"}
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 4 LIMIT 1 /*action='show',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  Rendering layout layouts/application.html.erb
+  Rendering stories/show.html.erb within layouts/application
+  Rendered stories/show.html.erb within layouts/application (Duration: 2.9ms | GC: 1.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | GC: 1.4ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 7.2ms)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement #to_partial_path.)
+Caused by: ArgumentError ('nil' is not an ActiveModel-compatible object. It must implement #to_partial_path.)
+
+Information for: ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement #to_partial_path.):
+    1: <p style="color: green"><%= notice %></p>
+    2: 
+    3: <%= render StoryDecorator.new(@story) %>
+    4: 
+    5: <div>
+    6:   <%= link_to "Edit this story", edit_story_path(@story) %> |
+  
+app/views/stories/show.html.erb:3
+
+Information for cause: ArgumentError ('nil' is not an ActiveModel-compatible object. It must implement #to_partial_path.):
+  
+app/views/stories/show.html.erb:3
+Started GET "/stories" for 127.0.0.1 at 2025-07-07 05:23:33 +0000
+Processing by StoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.7ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 2.6ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 38.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 57.4ms | GC: 0.0ms)
+Completed 200 OK in 92ms (Views: 58.0ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories/4" for 127.0.0.1 at 2025-07-07 05:23:37 +0000
+Processing by StoriesController#show as HTML
+  Parameters: {"id" => "4"}
+  [1m[36mStory Load (0.7ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 4 LIMIT 1 /*action='show',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  Rendering layout layouts/application.html.erb
+  Rendering stories/show.html.erb within layouts/application
+  Rendered stories/show.html.erb within layouts/application (Duration: 2.1ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | GC: 0.0ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement #to_partial_path.)
+Caused by: ArgumentError ('nil' is not an ActiveModel-compatible object. It must implement #to_partial_path.)
+
+Information for: ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement #to_partial_path.):
+    1: <p style="color: green"><%= notice %></p>
+    2: 
+    3: <%= render StoryDecorator.new(@story) %>
+    4: 
+    5: <div>
+    6:   <%= link_to "Edit this story", edit_story_path(@story) %> |
+  
+app/views/stories/show.html.erb:3
+
+Information for cause: ArgumentError ('nil' is not an ActiveModel-compatible object. It must implement #to_partial_path.):
+  
+app/views/stories/show.html.erb:3
+Started GET "/stories" for 127.0.0.1 at 2025-07-07 05:34:14 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='Blog'*/[0m
+Processing by StoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (32.0ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 4.3ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 3.6ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 97.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 123.7ms | GC: 0.0ms)
+Completed 200 OK in 194ms (Views: 86.1ms | ActiveRecord: 46.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories/new" for 127.0.0.1 at 2025-07-07 05:34:20 +0000
+Processing by StoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form_story_form.html.erb (Duration: 13.3ms | GC: 0.0ms)
+  Rendered stories/new.html.erb within layouts/application (Duration: 17.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 25.5ms | GC: 0.0ms)
+Completed 200 OK in 66ms (Views: 27.2ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/stories" for 127.0.0.1 at 2025-07-07 05:34:26 +0000
+Processing by StoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "story_form" => {"title" => "453jgh", "body" => "gjh"}, "commit" => "Create Story form"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form_story_form.html.erb (Duration: 36.3ms | GC: 0.0ms)
+  Rendered stories/new.html.erb within layouts/application (Duration: 40.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 43.1ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 65ms (Views: 44.1ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/stories" for 127.0.0.1 at 2025-07-07 05:34:30 +0000
+Processing by StoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "story_form" => {"title" => "453jgh", "body" => "645y4y45yh4h4hbngjh"}, "commit" => "Create Story form"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/new.html.erb within layouts/application
+  Rendered stories/_form_story_form.html.erb (Duration: 7.7ms | GC: 0.0ms)
+  Rendered stories/new.html.erb within layouts/application (Duration: 8.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | GC: 0.0ms)
+Completed 422 Unprocessable Content in 42ms (Views: 17.0ms | ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/stories" for 127.0.0.1 at 2025-07-07 05:34:37 +0000
+Processing by StoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "story_form" => {"title" => "453jgh", "body" => "645y4y45yh4h4hbngjht4reg"}, "commit" => "Create Story form"}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN /*action='create',application='Blog',controller='stories'*/[0m
+  ↳ app/forms/story_form.rb:11:in 'StoryForm#save'
+  [1m[36mStory Create (3.0ms)[0m  [1m[32mINSERT INTO "stories" ("title", "body", "published", "created_at", "updated_at") VALUES ('453jgh', '645y4y45yh4h4hbngjht4reg', FALSE, '2025-07-07 05:34:37.517681', '2025-07-07 05:34:37.517681') RETURNING "id" /*action='create',application='Blog',controller='stories'*/[0m
+  ↳ app/forms/story_form.rb:11:in 'StoryForm#save'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT /*action='create',application='Blog',controller='stories'*/[0m
+  ↳ app/forms/story_form.rb:11:in 'StoryForm#save'
+Redirected to http://localhost:3000/stories
+Completed 302 Found in 92ms (ActiveRecord: 4.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories" for 127.0.0.1 at 2025-07-07 05:34:37 +0000
+Processing by StoriesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.5ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 1.2ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 23.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | GC: 0.0ms)
+Completed 200 OK in 48ms (Views: 26.9ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=&published=false&commit=Buscar" for 127.0.0.1 at 2025-07-07 05:34:42 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "", "published" => "false", "commit" => "Buscar"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."published" = FALSE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 0.8ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 11.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | GC: 0.0ms)
+Completed 200 OK in 61ms (Views: 16.4ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=&published=true&commit=Buscar" for 127.0.0.1 at 2025-07-07 05:34:44 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "", "published" => "true", "commit" => "Buscar"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (2.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."published" = TRUE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 0.3ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 1.1ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 34.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 35.2ms | GC: 0.0ms)
+Completed 200 OK in 58ms (Views: 36.3ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=&published=false&commit=Buscar" for 127.0.0.1 at 2025-07-07 05:34:47 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "", "published" => "false", "commit" => "Buscar"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."published" = FALSE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 21.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | GC: 0.0ms)
+Completed 200 OK in 42ms (Views: 25.6ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=7&published=false&commit=Buscar" for 127.0.0.1 at 2025-07-07 05:34:50 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "7", "published" => "false", "commit" => "Buscar"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (1.7ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE (title ILIKE '%7%') AND "stories"."published" = FALSE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/index.html.erb within layouts/application (Duration: 25.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | GC: 0.0ms)
+Completed 200 OK in 55ms (Views: 26.0ms | ActiveRecord: 1.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=3&published=false&commit=Buscar" for 127.0.0.1 at 2025-07-07 05:34:52 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "3", "published" => "false", "commit" => "Buscar"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE (title ILIKE '%3%') AND "stories"."published" = FALSE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 4.6ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | GC: 0.0ms)
+Completed 200 OK in 27ms (Views: 8.0ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=&published=false&commit=Buscar" for 127.0.0.1 at 2025-07-07 05:34:54 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "", "published" => "false", "commit" => "Buscar"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."published" = FALSE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 20.2ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | GC: 0.0ms)
+Completed 200 OK in 40ms (Views: 20.9ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=&published=&commit=Buscar" for 127.0.0.1 at 2025-07-07 05:34:57 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "", "published" => "", "commit" => "Buscar"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.8ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 2.1ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 0.9ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 0.4ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 20.0ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | GC: 0.0ms)
+Completed 200 OK in 45ms (Views: 21.9ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories/5" for 127.0.0.1 at 2025-07-07 05:34:59 +0000
+Processing by StoriesController#show as HTML
+  Parameters: {"id" => "5"}
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+Started GET "/stories?search=&published=&commit=Buscar" for 127.0.0.1 at 2025-07-07 05:35:53 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "", "published" => "", "commit" => "Buscar"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (1.3ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 2.4ms | GC: 0.2ms)
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 1.1ms | GC: 1.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 128.4ms | GC: 12.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 149.7ms | GC: 16.3ms)
+Completed 200 OK in 191ms (Views: 146.6ms | ActiveRecord: 8.2ms (1 query, 0 cached) | GC: 22.8ms)
+
+
+Started GET "/stories/5" for 127.0.0.1 at 2025-07-07 05:35:56 +0000
+Processing by StoriesController#show as HTML
+  Parameters: {"id" => "5"}
+  [1m[36mStory Load (0.7ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 5 LIMIT 1 /*action='show',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  Rendering layout layouts/application.html.erb
+  Rendering stories/show.html.erb within layouts/application
+  Rendered stories/_story.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered stories/show.html.erb within layouts/application (Duration: 10.2ms | GC: 1.7ms)
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | GC: 2.7ms)
+Completed 200 OK in 76ms (Views: 17.8ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 8.7ms)
+
+
+Started GET "/stories/5/edit" for 127.0.0.1 at 2025-07-07 05:35:59 +0000
+Processing by StoriesController#edit as HTML
+  Parameters: {"id" => "5"}
+  [1m[36mStory Load (0.9ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 5 LIMIT 1 /*action='edit',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  Rendering layout layouts/application.html.erb
+  Rendering stories/edit.html.erb within layouts/application
+  Rendered stories/_form.html.erb (Duration: 11.6ms | GC: 1.3ms)
+  Rendered stories/edit.html.erb within layouts/application (Duration: 17.5ms | GC: 1.3ms)
+  Rendered layout layouts/application.html.erb (Duration: 31.2ms | GC: 4.5ms)
+Completed 200 OK in 79ms (Views: 38.0ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 9.8ms)
+
+
+Started PATCH "/stories/5" for 127.0.0.1 at 2025-07-07 05:36:01 +0000
+Processing by StoriesController#update as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "story" => {"title" => "453jgh", "body" => "645y4y4"}, "commit" => "Update Story", "id" => "5"}
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 5 LIMIT 1 /*action='update',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='update',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:40:in 'block in StoriesController#update'
+  [1m[36mStory Update (2.6ms)[0m  [1m[33mUPDATE "stories" SET "body" = '645y4y4', "updated_at" = '2025-07-07 05:36:01.638913' WHERE "stories"."id" = 5 /*action='update',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:40:in 'block in StoriesController#update'
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT /*action='update',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:40:in 'block in StoriesController#update'
+Redirected to http://localhost:3000/stories/5
+Completed 302 Found in 73ms (ActiveRecord: 4.5ms (2 queries, 0 cached) | GC: 2.0ms)
+
+
+Started GET "/stories/5" for 127.0.0.1 at 2025-07-07 05:36:01 +0000
+Processing by StoriesController#show as TURBO_STREAM
+  Parameters: {"id" => "5"}
+  [1m[36mStory Load (0.6ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 5 LIMIT 1 /*action='show',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  Rendering layout layouts/application.html.erb
+  Rendering stories/show.html.erb within layouts/application
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/show.html.erb within layouts/application (Duration: 1.5ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | GC: 0.0ms)
+Completed 200 OK in 20ms (Views: 3.5ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories/5/edit" for 127.0.0.1 at 2025-07-07 05:36:03 +0000
+Processing by StoriesController#edit as HTML
+  Parameters: {"id" => "5"}
+  [1m[36mStory Load (0.7ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 5 LIMIT 1 /*action='edit',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  Rendering layout layouts/application.html.erb
+  Rendering stories/edit.html.erb within layouts/application
+  Rendered stories/_form.html.erb (Duration: 11.9ms | GC: 0.0ms)
+  Rendered stories/edit.html.erb within layouts/application (Duration: 14.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | GC: 0.0ms)
+Completed 200 OK in 37ms (Views: 16.7ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories/5/edit" for 127.0.0.1 at 2025-07-07 05:36:04 +0000
+Processing by StoriesController#edit as HTML
+  Parameters: {"id" => "5"}
+  [1m[36mStory Load (0.7ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 5 LIMIT 1 /*action='edit',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  Rendering layout layouts/application.html.erb
+  Rendering stories/edit.html.erb within layouts/application
+  Rendered stories/_form.html.erb (Duration: 5.2ms | GC: 2.1ms)
+  Rendered stories/edit.html.erb within layouts/application (Duration: 5.6ms | GC: 2.1ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.4ms | GC: 2.1ms)
+Completed 200 OK in 33ms (Views: 6.9ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 2.1ms)
+
+
+Started GET "/stories" for 127.0.0.1 at 2025-07-07 05:36:07 +0000
+Processing by StoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.5ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 0.6ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 0.5ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 23.2ms | GC: 1.2ms)
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | GC: 1.2ms)
+Completed 200 OK in 44ms (Views: 25.3ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 1.2ms)
+
+
+Started GET "/stories/5" for 127.0.0.1 at 2025-07-07 05:36:09 +0000
+Processing by StoriesController#show as HTML
+  Parameters: {"id" => "5"}
+  [1m[36mStory Load (0.9ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 5 LIMIT 1 /*action='show',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  Rendering layout layouts/application.html.erb
+  Rendering stories/show.html.erb within layouts/application
+  Rendered stories/_story.html.erb (Duration: 0.2ms | GC: 0.0ms)
+  Rendered stories/show.html.erb within layouts/application (Duration: 4.8ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | GC: 0.0ms)
+Completed 200 OK in 33ms (Views: 6.6ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories?search=&published=false&commit=Buscar" for 127.0.0.1 at 2025-07-07 05:36:11 +0000
+Processing by StoriesController#index as HTML
+  Parameters: {"search" => "", "published" => "false", "commit" => "Buscar"}
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.7ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."published" = FALSE /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 5.0ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 12.9ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | GC: 0.0ms)
+Completed 200 OK in 47ms (Views: 13.8ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 1.1ms)
+
+
+Started GET "/stories/5" for 127.0.0.1 at 2025-07-07 05:36:12 +0000
+Processing by StoriesController#show as HTML
+  Parameters: {"id" => "5"}
+  [1m[36mStory Load (0.7ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 5 LIMIT 1 /*action='show',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  Rendering layout layouts/application.html.erb
+  Rendering stories/show.html.erb within layouts/application
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/show.html.erb within layouts/application (Duration: 3.3ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | GC: 0.0ms)
+Completed 200 OK in 31ms (Views: 5.0ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/stories/5/edit" for 127.0.0.1 at 2025-07-07 05:36:14 +0000
+Processing by StoriesController#edit as HTML
+  Parameters: {"id" => "5"}
+  [1m[36mStory Load (0.9ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 5 LIMIT 1 /*action='edit',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  Rendering layout layouts/application.html.erb
+  Rendering stories/edit.html.erb within layouts/application
+  Rendered stories/_form.html.erb (Duration: 5.2ms | GC: 0.0ms)
+  Rendered stories/edit.html.erb within layouts/application (Duration: 5.7ms | GC: 0.0ms)
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | GC: 0.0ms)
+Completed 200 OK in 41ms (Views: 7.5ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started DELETE "/stories/5" for 127.0.0.1 at 2025-07-07 05:36:15 +0000
+Processing by StoriesController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token" => "[FILTERED]", "id" => "5"}
+  [1m[36mStory Load (0.7ms)[0m  [1m[34mSELECT "stories".* FROM "stories" WHERE "stories"."id" = 5 LIMIT 1 /*action='destroy',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:68:in 'StoriesController#set_story'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN /*action='destroy',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:52:in 'StoriesController#destroy'
+  [1m[36mStory Destroy (2.0ms)[0m  [1m[31mDELETE FROM "stories" WHERE "stories"."id" = 5 /*action='destroy',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:52:in 'StoriesController#destroy'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT /*action='destroy',application='Blog',controller='stories'*/[0m
+  ↳ app/controllers/stories_controller.rb:52:in 'StoriesController#destroy'
+Redirected to http://localhost:3000/stories
+Completed 303 See Other in 51ms (ActiveRecord: 3.7ms (2 queries, 0 cached) | GC: 3.6ms)
+
+
+Started GET "/stories" for 127.0.0.1 at 2025-07-07 05:36:15 +0000
+Processing by StoriesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering stories/index.html.erb within layouts/application
+  [1m[36mStory Load (0.5ms)[0m  [1m[34mSELECT "stories".* FROM "stories" /*action='index',application='Blog',controller='stories'*/[0m
+  ↳ app/views/stories/index.html.erb:25
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 1.3ms | GC: 0.0ms)
+  Rendered stories/_story.html.erb (Duration: 0.1ms | GC: 0.0ms)
+  Rendered stories/index.html.erb within layouts/application (Duration: 5.1ms | GC: 0.4ms)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | GC: 0.4ms)
+Completed 200 OK in 25ms (Views: 5.8ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.4ms)
+
+
