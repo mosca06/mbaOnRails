@@ -21,7 +21,7 @@ A aplicação é um CRUD básico para gerenciamento de contos, textos que remete
 ```bash
 # Clone o repositório
 git clone https://github.com/mosca06/mbaOnRails.git
-cd "Arquitetura de Aplicações Web com Rails"
+cd "ArquiteturaDeAplicaçõesWebComRails"
 
 # Abra o VSCode na pasta do projeto
 code .
