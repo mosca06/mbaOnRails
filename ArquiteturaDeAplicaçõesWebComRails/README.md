@@ -1,6 +1,11 @@
+Aluno: Eduardo Mello
+Email: eduardomell06@hotmail.com
+
 # Arquitetura de Aplicações Web com Rails
 
 Este é um projeto desenvolvido como parte da disciplina "Arquitetura de Aplicações Web com Rails" do MBA. O objetivo é criar uma aplicação web funcional utilizando Ruby on Rails, aplicando os conceitos aprendidos durante as aulas para garantir boas práticas e uma estrutura organizada.
+
+# Contoteca
 
 A aplicação é um CRUD básico para gerenciamento de contos, textos que remetem a memórias e histórias importantes.
 
