@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  player_hand: 
+  dealer_hand: 
+  status: MyString
+  winner: MyString
+
+two:
+  player_hand: 
+  dealer_hand: 
+  status: MyString
+  winner: MyString
