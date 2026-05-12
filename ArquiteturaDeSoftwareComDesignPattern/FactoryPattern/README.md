@@ -1,34 +1,3 @@
-1. Responsabilidade Separada: 
-A classe principal (Factory) não precisa saber como criar cada trabalhador.
-
-2. Código Mais Organizado: 
-Toda a lógica de criação fica em um único lugar.
-
-3. Facilita Adicionar Novos Tipos -
-Para adicionar um Pintor basta:
-
-Criar painter.rb
-Adicionar ao WORKERS
-
-Sem alterar a lógica principal.
-
-4. Menor Acoplamento
-A classe principal não depende diretamente de todas as classes concretas.
-
-5. Mais Fácil de Testar
-Você pode testar a lógica de criação separadamente.
-
-
-Quando usar:
-1- Existem vários tipos de objetos com a mesma "funçao".
-2- A lógica de criação pode crescer.
-3- Você quer centralizar a criação.
-4- Novos tipos serão adicionados com frequência.
-5- A classe principal está ficando cheia de if/elsif ou case.
-
-Quando Não Usar
-1- Poucas classes acaba ficando um "overengineering"
-2- Não há expectativa de expansão.
 
 
 
@@ -163,14 +132,54 @@ Cada parte tem uma única responsabilidade.
 
 ## 📈 Vantagens
 
-Se amanhã a fábrica contratar um pintor:
+1. Responsabilidade Separada: 
+A classe principal (Factory) não precisa saber como criar cada trabalhador.
 
-* Cria-se a classe `Painter`.
-* Adiciona-se ao `WorkerFactory`.
+2. Código Mais Organizado: 
+Toda a lógica de criação fica em um único lugar.
 
-O gerente continua exatamente o mesmo.
+3. Facilita Adicionar Novos Tipos -
+Para adicionar um Pintor basta:
 
----
+Criar painter.rb
+Adicionar ao WORKERS
+
+Sem alterar a lógica principal.
+
+4. Menor Acoplamento
+A classe principal não depende diretamente de todas as classes concretas.
+
+5. Mais Fácil de Testar
+Você pode testar a lógica de criação separadamente.
+
+## 📉 Desvantagens
+
+1. Mais Arquivos
+
+Você adiciona uma classe extra (WorkerFactory).
+
+2. Pode Ser Overengineering
+
+Em sistemas muito pequenos, um simples case pode ser suficiente.
+
+3. Camada Adicional
+
+O fluxo ganha um passo a mais:
+
+Classe principal → fábrica → objeto.
+
+
+Quando usar:
+1- Existem vários tipos de objetos com a mesma "funçao".
+2- A lógica de criação pode crescer.
+3- Você quer centralizar a criação.
+4- Novos tipos serão adicionados com frequência.
+5- A classe principal está ficando cheia de if/elsif ou case.
+
+Quando Não Usar
+1- Poucas classes acaba ficando um "overengineering"
+2- Não há expectativa de expansão.
+
 
 ## 🧠 Frase para Memorizar
 
