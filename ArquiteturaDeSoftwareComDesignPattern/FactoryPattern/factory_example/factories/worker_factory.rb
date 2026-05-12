@@ -10,6 +10,10 @@ class WorkerFactory
   }
 
   def self.create(type)
-    WORKERS[type].new
+    worker_class = WORKERS.fetch(type) do
+      raise ArgumentError, "Tipo de trabalhador desconhecido: #{type}"
+    end
+
+    worker_class.new
   end
 end
